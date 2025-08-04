@@ -1,3 +1,11 @@
+import os
+import json
+
+# Write secret to file at runtime
+if os.environ.get("GOOGLE_CREDENTIALS_JSON"):
+    with open("credentials.json", "w") as f:
+        f.write(os.environ["GOOGLE_CREDENTIALS_JSON"])
+
 
 import datetime
 from sheets import SheetsHandler
