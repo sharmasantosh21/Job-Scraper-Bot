@@ -11,4 +11,5 @@ KEYWORDS = [
     "Software Engineer"
 ]
 
-SOURCES = ["naukri", "indeed"]
+SOURCES = ["naukri", "indeed", "timesjobs", "foundit", "glassdoor"]
+
