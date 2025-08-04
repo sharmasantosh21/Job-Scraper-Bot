@@ -1,5 +1,13 @@
 
 import datetime
+import os
+import json
+
+# Write JSON credentials from secret (GitHub Actions) to a local file
+if os.environ.get("GOOGLE_CREDENTIALS_JSON"):
+    with open("credentials.json", "w") as f:
+        f.write(os.environ["GOOGLE_CREDENTIALS_JSON"])
+
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from config import GOOGLE_SERVICE_ACCOUNT_FILE, SPREADSHEET_ID, SHEET_NAME
