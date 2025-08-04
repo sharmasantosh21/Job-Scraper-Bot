@@ -44,8 +44,7 @@ def main():
         all_jobs += glassdoor_jobs
 
     # Filter results
-    # filtered = [job for job in all_jobs if job_matches_keywords(job, KEYWORDS) and is_recent(job.get("date"))]
-    filtered = all_jobs[:10]  # Test by sending first 10 jobs directly
+    filtered = [job for job in all_jobs if job_matches_keywords(job, KEYWORDS) and is_recent(job.get("date"))]
     print(f"Jobs after filtering: {len(filtered)}")
 
     # Push to Google Sheets
